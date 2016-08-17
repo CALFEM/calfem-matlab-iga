@@ -5,7 +5,7 @@ Isogeometric Analysis toolbox for CALFEM for MATLAB.
 
 1. Click "Download as zip" to download the package and unpack it. 
 
-2. Add the these directories to the MATLAB path by clicking "Set path" in MATLAB, then "Add with Subfolders...", chose the unpackaged directory and then "Save"."
+2. Add the directories to the MATLAB path by clicking "Set path" in MATLAB, then "Add with Subfolders...", chose the unpackaged directory and then "Save"."
 
 
 ###Testing the installation
