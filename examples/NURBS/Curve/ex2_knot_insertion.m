@@ -1,5 +1,5 @@
 clear all; close all; clc;
-%%
+%% Input
 resolution = 100; % Number of places to evaluate the curve at
 
 % Knot vector
@@ -9,7 +9,7 @@ Xi = [ 0 0 0 1 2 3 4 4 5 5 5];
 x = [0 1  2  2 4 5 2 1]';
 y = [0 -1 -1 1 1 3 5 2]';
 w = [1  1  1 2 3 1 5 1]';
-% 
+
 % Number of knots
 k = length(Xi);
 
@@ -19,7 +19,7 @@ n = length(x);
 % Order of basis
 p = k-n-1;
 
-% Calculate NURBS basis
+%% Calculate NURBS basis
 [ R , Xi_store] = nrbasis_num( Xi, w, resolution );
 
 % Plot knot-vector vs NURBS basis functions
