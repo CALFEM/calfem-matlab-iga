@@ -1,5 +1,5 @@
 clear all; close all; clc;
-%%
+%% Input
 resolution = 15; % Number of places to evaluate the curve at
 
 % Knot vector
