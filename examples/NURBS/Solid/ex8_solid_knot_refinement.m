@@ -14,11 +14,11 @@ data_solid4
 
 fprintf('Time to load data: %2.2f seconds\n',toc); tic;
 %% Perform knot refinement
-% Refine once in Xi
+% Subdivide once in Xi
 [ X_ ] = getSubDivKVValues( Xi, 1 );
 [B,Xi] = RefineKnotSolidXi( B,p,Xi,X_ );
 
-% Refine twice in Eta and Zeta
+% Subdivide twice in Eta and Zeta
 [ E_ ] = getSubDivKVValues( Eta, 2 );
 [ B,Eta ] = RefineKnotSolidEta( B,q,Eta,E_ );
 [ Z_ ] = getSubDivKVValues( Zeta, 2 );
