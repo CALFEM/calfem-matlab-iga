@@ -13,13 +13,10 @@ data_solid4
 % data_solid9
 
 fprintf('Time to load data: %2.2f seconds\n',toc); tic;
-
-
-
 %% Perform knot refinement
 % Refine once in Xi
-[ X ] = getSubDivKVValues( Xi, 1 );
-[B,Xi] = RefineKnotSolidXi( B,p,Xi,X );
+[ X_ ] = getSubDivKVValues( Xi, 1 );
+[B,Xi] = RefineKnotSolidXi( B,p,Xi,X_ );
 
 % Refine twice in Eta and Zeta
 [ E_ ] = getSubDivKVValues( Eta, 2 );
