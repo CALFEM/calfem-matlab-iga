@@ -2,8 +2,8 @@ function [ Q,Etai ] = DegElevEta( B,q,Eta,d )
 %[ Q,Etai ] = DegElevEta( B,q,Eta,d )
 %-------------------------------------------------------------
 % PURPOSE:
-% Performs degree elevation for NURBS surfaces and solids in the 
-% second direction (Eta).
+%  Performs degree elevation for NURBS surfaces and solids in the 
+%  second direction (Eta).
 %
 % INPUT: B = cell structure containing 3-D control points and weigths
 %            B{i,j,k}[x,y,z,w]

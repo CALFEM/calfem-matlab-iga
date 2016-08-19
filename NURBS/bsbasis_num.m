@@ -2,8 +2,8 @@ function [ N, Xi_store ] = bsbasis_num( Xi, p, res )
 %[ NN_, U_ ] = bsbasis_num( Xi, p, res )
 %-------------------------------------------------------------
 % PURPOSE:
-% Returns all B-Spline basis functions of order p for the k 
-% intervals in the knot vector Xi, and n weghts in w.
+%  Returns all B-Spline basis functions of order p for the k 
+%  intervals in the knot vector Xi, and n weghts in w.
 %
 % INPUT: Xi = non-uniform clamped knot vector (1 x k+1)
 %        p = degree

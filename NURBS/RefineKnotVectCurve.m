@@ -1,21 +1,18 @@
 function [Xibar,Qw] = RefineKnotVectCurve(n,p,Xi,Pw,X,r)
+% [Ubar,Qw] = RefineKnotVectCurve(n,p,U,Pw,X,r)
 %--------------------------------------------------------------
-%function [Ubar,Qw] = RefineKnotVectCurve(n,p,U,Pw,X,r)
-% algorithm A5.4 in The NURBS Book (Piegl & Tiller)
-% insert multiple knots into curve
-%INPUT:
-% n         : number ob basis functions -1 !
-%        NURBS-Book: n+1 # basis, np max index (startindex 0)
-%        here        n   # basis and max index (startindex 1)
-% p          : degree of the basis functions
-% Xi         : old knotvector
-% Pw         : old control points
-% X          : vector of new knots (multiple entries possible)
-% r          :  (size of X) -1 (count the multple entries as well
-%                reason: same as above: max X index
-%OUTPUT:
-% Xibar       : new knot vector
-% Qw         : new control points
+% PURPOSE:
+%  Insert multiple knots into curve, NURBS-Book (algorithm A5.4)
+%  
+%INPUT: n = number of basis functions -1
+%       p = degree of the basis functions
+%       Xi = old knotvector
+%       Pw = old control points
+%       X = vector of new knots (multiple entries possible)
+%       r = (size of X) -1 (count the multple entries as well
+%
+%OUTPUT: Xibar = new knot vector
+%        Qw = new control points
 %--------------------------------------------------------------
 
 %initialise arrays;

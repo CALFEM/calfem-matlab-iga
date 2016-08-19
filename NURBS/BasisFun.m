@@ -1,19 +1,19 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function N = BasisFun(i,u,p,U)
-%--------------------------------------------------------------
-%function N = BasisFun(i,p,u,U)
-% NURBS-Book (algorithm A2.2)
-% evalute nonzero basis functions
-%INPUT:
-% i          : current knotspan
-% u          : evaluation point
-% p          : degree of the basis functions
-% U          : knot vector (row vector)
-%OUTPUT:
-% N          : row vector (dim p+1)
-%              values of the basis function N_(i-p) ... N_(i)
-%              at the evaluation point u
-%--------------------------------------------------------------
+% N = BasisFun(i,u,p,U)
+%-------------------------------------------------------------
+% PURPOSE:
+%  Evalute nonzero basis functions, NURBS-Book (algorithm A2.2)
+% 
+% INPUT: i = current knotspan
+%        u = evaluation point
+%        p = degree of the basis functions
+%        U = knot vector (row vector)
+%
+% OUTPUT: N = row vector (dim p+1)
+%             values of the basis function N_(i-p) ... N_(i)
+%             at the evaluation point u
+%-------------------------------------------------------------
+
 N=zeros(1,p+1);
 N(1)=1;
 left=zeros(1,p+1);

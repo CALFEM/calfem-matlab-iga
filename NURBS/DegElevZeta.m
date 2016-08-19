@@ -2,8 +2,8 @@ function [ Q,Zetai ] = DegElevZeta( B,r,Zeta,d )
 %[ Q,Zetai ] = DegElevZeta( B,r,Zeta,d )
 %-------------------------------------------------------------
 % PURPOSE:
-% Performs degree elevation for NURBS solids in the 
-% third direction (Zeta).
+%  Performs degree elevation for NURBS solids in the 
+%  third direction (Zeta).
 %
 % INPUT: B = cell structure containing 3-D control points and weigths
 %            B{i,j,k}[x,y,z,w]

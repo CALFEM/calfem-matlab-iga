@@ -2,8 +2,8 @@ function [ R , U] = nrbasis_num( Xi, w,res )
 %[ R , U] = nrbasis_num( Xi, w,res )
 %-------------------------------------------------------------
 % PURPOSE:
-% Returns all NURBS basis functions of order p for the k 
-% intervals in the knot vector Xi, and n weghts in w.
+%  Returns all NURBS basis functions of order p for the k 
+%  intervals in the knot vector Xi, and n weghts in w.
 %
 % INPUT: Xi = non-uniform clamped knot vector (1 x k+1)
 %        w = weights of controlpoints (1 x n)

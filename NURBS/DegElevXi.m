@@ -2,8 +2,8 @@ function [ Q,Xii ] = DegElevXi( B,p,Xi,d )
 %[ Q,Xii ] = DegElevXi( B,p,Xi,d )
 %-------------------------------------------------------------
 % PURPOSE:
-% Performs degree elevation for NURBS surfaces and solids in the 
-% first direction (Xi).
+%  Performs degree elevation for NURBS surfaces and solids in the 
+%  first direction (Xi).
 %
 % INPUT: B = cell structure containing 3-D control points and weigths
 %            B{i,j,k}[x,y,z,w]
