@@ -15,8 +15,7 @@ function [ N, Xi_store ] = bsbasis_num( Xi, p, res )
 
 k = length(Xi);
 n = k - p - 1;
-
-Xi_store =  min(Xi) : max(Xi)/res : max(Xi); % Evaluate basis functions at each xi in Xi_store
+Xi_store =  linspace(min(Xi),max(Xi),res); % Evaluate basis functions at each xi in Xi_store
 Xi_store = unique(sort([Xi_store Xi])); % <- Makes sure that the knots are included (In order to plot the knots, otherwise we could ignore this)
 N = zeros(n,length(Xi_store)); % We have n basisfunctions, evaluated at each xi
 for i = 1:length(Xi_store)

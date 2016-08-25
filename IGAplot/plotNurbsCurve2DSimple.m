@@ -16,18 +16,18 @@ function [  ] = plotNurbsCurve2DSimple( Curve )
 
 
 %% Generate basis
-res = 40; % Compute 40 samples, uniformly distributed (and knot points are auto-included)
+res = 100; % Compute 40 samples, uniformly distributed (and knot points are auto-included)
 [ R , U] = nrbasis_num( Curve.KV, Curve.w, res );
 
 %% Calculate NURBS-spline curve
 C = R' * Curve.CP;
 
 %% Plot basis
-figure(1)
-plotNurbsBasis(R,U);
+%figure(1)
+%plotNurbsBasis(R,U);
 
 %% PLot curve
-figure()
+%figure(2)
 plotNurbsCurve2D(C(:,1),C(:,2),Curve.KV,U,Curve.CP(:,1),Curve.CP(:,2));
 
 end
