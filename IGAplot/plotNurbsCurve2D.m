@@ -16,7 +16,7 @@ function [  ] = plotNurbsCurve2D( Cx, Cy, Xi, U, x, y )
 %-------------------------------------------------------------
 
 
-plot(Cx,Cy);
+plot(Cx,Cy,'color',[0 0.4470 0.7410]);
 grid on
 hold on
 plot(x,y,'r:o')
@@ -27,7 +27,7 @@ xi_pos=[];
 for i = 1 : length(Xiu)
     xi_pos = [xi_pos find(U == Xiu(i))];
 end
-plot(Cx(xi_pos),Cy(xi_pos),'o')
+plot(Cx(xi_pos),Cy(xi_pos),'d','color',[0 0.4470 0.7410])
 axis equal
 
 
