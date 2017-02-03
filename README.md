@@ -7,7 +7,7 @@ Isogeometric Analysis toolbox for CALFEM for MATLAB.
 
 2. To install the IGA toolbox, click "Download as zip" to download the package, and then unpack it. 
 
-3. Add the directories to the MATLAB path by clicking "Set path" in MATLAB, then "Add with Subfolders...", choose the unpackaged directory and then "Save"."
+3. Add the directories to the MATLAB path by clicking "Set path" in MATLAB, then "Add Folder...", select "calfem-matlab-iga/IGA" and then "Save"." Using the same method add the following folders too: "calfem-matlab-iga/IGAplot", "calfem-matlab-iga/IGAutil", "calfem-matlab-iga/NURBS"
 
 
 ###Testing the installation
