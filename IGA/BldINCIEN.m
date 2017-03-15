@@ -1,6 +1,7 @@
 function [ INC,IEN ] = BldINCIEN( p,q,r,n,m,l )
 %[ INN,IEN ] = BldINCIEN( p,q,r,n,m,l )
 %[ INN,IEN ] = BldINCIEN( p,q,n,m )
+%[ INN,IEN ] = BldINCIEN( p,n )
 %-------------------------------------------------------------
 % PURPOSE:
 %  Constructs the INC and IEN arrays. 
@@ -97,7 +98,37 @@ elseif nargin == 4
         end
     end
     
-% ----------------------- Else: ------------------------- %    
+    
+% ---------------------------- For curves --------------------------- %
+elseif nargin == 2
+    n = q; % Fix var names.
+    
+    
+    nel = (n-p); % number of elements
+    nnp = n; % number of global basis functions
+    nen = (p+1); % number of local basis functions
+    INC = zeros(nnp,1); % NURBS coordinates array
+    IEN = zeros(nen,nel); % connectivity array ( = Enod' )
+    
+    % Local variable initializations:
+    A = 0; e=0;
+    
+    for i = 1 : n
+
+        A = A + 1;
+        INC(A,1) = i;
+
+        if i >= (p+1)
+            e = e + 1;
+            for iloc = 0 : p
+                B_ = A - iloc; % global function number
+                b = iloc + 1; % local function number
+                IEN(b,e) = B_; % assign connectivity
+            end
+        end
+    end
+    
+% ----------------------- Else: ------------------------- %
 else
     fprintf('Error, only 4 or 6 input arguments supported.\n')
     INC = nan;
