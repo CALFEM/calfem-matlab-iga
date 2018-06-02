@@ -14,7 +14,7 @@ function [ gp,w ] = getGP( p )
 n = ceil((p*2+1)/2);
 
 if n == 1
-    gp(1) = 0;   % Two gp's
+    gp(1) = 0;   % one gp's
     w(1) = 2;                     %
 elseif n == 2
     gp = [-1/sqrt(3) 1/sqrt(3)];   % Two gp's
