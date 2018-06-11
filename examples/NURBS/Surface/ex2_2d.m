@@ -4,29 +4,20 @@ clear all; close all; clc;
 resolution_xi = 20; % Number of places to evaluate the surface at in xi
 resolution_eta = 20; % Number of places to evaluate the surface at in eta
 
+
 Xi=[0 0 0 0.5 1 1 1];
 Eta=[0 0 0 0.5 1 1 1];
-
-% Control point net:
+X=[1 2 3 4; 1 2 3 4; 1 2 3 4; 1 2 3 4];
+Y=[1 1 1 1; 2 2 2 2; 3 3 3 3; 4 4 4 4];
+Z=[1 2 2 1; 0.5 1.5 3 1.5; 2 1.5 1 1; 1.5 1 1.5 1];
+W=[1 1 1 1; 1 1 1 1; 1 1 1 1; 1 1 1 1];
 B=cell(4,4);
-%        [x y z      w]
-B{1,1} = [1 1 1      1];
-B{2,1} = [2 1 2      1];
-B{3,1} = [3 1 2      1];
-B{4,1} = [4 1 1      1];
-B{1,2} = [1 2 1/2    1];
-B{2,2} = [2 2 3/2  1];
-B{3,2} = [3 2 3  1];
-B{4,2} = [4 2 1.5  1]; 
-B{1,3} = [1 3 2  1];
-B{2,3} = [2 3 3/2  1];
-B{3,3} = [3 3 1  1];
-B{4,3} = [4 3 1  1];
-B{1,4} = [1 4 3/2  1];
-B{2,4} = [2 4 1  1];
-B{3,4} = [3 4 3/2  1];
-B{4,4} = [4 4 1  1];
 
+     for i = 1:4 
+     for j = 1:4
+     B{j,i}=[X(j,i) Y(j,i) Z(j,i) W(j,i)];
+     end
+     end 
 
 
 
