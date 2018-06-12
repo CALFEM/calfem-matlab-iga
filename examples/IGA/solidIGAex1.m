@@ -2,7 +2,9 @@ clear all; close all; clc;
 
 %% Load data
 count=1;
-run ./../NURBS/solid/data_solid6
+% run ./../NURBS/solid/data_solid6
+addpath ../NURBS/Solid
+run data_solid6
 % run ./../NURBS/solid/data_solid7
 deg.p = p; deg.q=q; deg.r = r; clear p q r
 
