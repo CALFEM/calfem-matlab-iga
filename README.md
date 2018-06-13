@@ -1,7 +1,7 @@
 # calfem-matlab-iga
 Isogeometric Analysis toolbox for CALFEM for MATLAB.
 
-###Installation instructions
+### Installation instructions
 
 1. Make sure you have CALFEM for MATLAB installed, see https://github.com/CALFEM/calfem-matlab
 
@@ -12,7 +12,7 @@ Isogeometric Analysis toolbox for CALFEM for MATLAB.
 4. Using the same method as in 3. add the following folders too: "calfem-matlab-iga/IGAplot", "calfem-matlab-iga/IGAutil", "calfem-matlab-iga/NURBS"
 
 
-###Testing the installation
+### Testing the installation
 
 enter the following commands at the MATLAB prompt:
 
