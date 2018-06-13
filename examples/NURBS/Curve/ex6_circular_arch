@@ -1,0 +1,39 @@
+clear all; close all; clc;
+%% Implementation
+% Knot vector
+Xi = [0 0 0 1 1 1];
+
+% Coordinates for B-spline/NURBS curve
+x = [8 9 9]';
+y = [0 0 1]';
+z = [0 0 0]' ;
+% Weights (if all equal -> B-spline, else NURBS);
+w = [1 sqrt(1/2) 1]';
+
+% Number of knots
+k = length(Xi);
+% Number of coordinates
+n = length(x);
+% Order of basis
+p = k-n-1;
+
+Curve.KV = Xi;
+Curve.CP = [x,y,z];
+Curve.w = w;
+Curve.degree = p;
+Curve.nCP = n;
+
+%% Generate basis
+res = 400; % Compute 40 samples, uniformly distributed (and knot points are auto-included)
+[ R , U] = nrbasis_num( Curve.KV, Curve.w, res );
+
+%% Calculate NURBS-spline curve
+C = R' * Curve.CP;
+
+%% Plot basis
+figure(1)
+plotNurbsBasis(R,U);
+
+%% PLot curve
+figure()
+plotNurbsCurve2D(C(:,1),C(:,2),Curve.KV,U,x,y);
